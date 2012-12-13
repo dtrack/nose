@@ -161,7 +161,7 @@ class AttributeSelector(Plugin):
         """Register command line options"""
         parser.add_option("-a", "--attr",
                           dest="attr", action="append",
-                          default=env.get('NOSE_ATTR'),
+                          default=[env.get('NOSE_ATTR')],
                           metavar="ATTR",
                           help="Run only tests that have attributes "
                           "specified by ATTR [NOSE_ATTR]")
